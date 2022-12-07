@@ -1,1 +1,1 @@
-# cv_creator
+# CV Creator созданный в рамках ДЗ-3
