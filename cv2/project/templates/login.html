@@ -1,0 +1,32 @@
+{% extends "draft.html" %}
+
+
+{% block content %}
+<div class="colimn login">
+	<h3 class="title"> Login</h3>
+		<div class="table">
+			{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			<div class="notification is-danger">
+				{{ messages[0] }}
+			</div>
+			{% endif %}
+			{% endwith %}
+			<form method="POST" action="/login">
+				<div class="field">
+					<div class="text">
+						<input class="inp" type="email" name="email" placeholder="Insert your email address">
+					</div>
+				</div>
+
+				<div class="field">
+					<div class="text">
+						<input class="inp" type="password" name="password" placeholder="Insert your password">
+					</div>
+				</div>
+
+				<button class="button">Login</button>
+			</form>
+		</div>
+</div>
+{% endblock %}

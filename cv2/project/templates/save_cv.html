@@ -1,0 +1,19 @@
+{% extends "draft.html" %}
+
+{% block content %}
+    <h3 class="title">Insert your data</h3>
+    <form action="#" method="POST" enctype="multipart/form-data">
+        <p>Name:</p>
+        <p><input type="text" name="name" required placeholder="Artem Parfenov" value="{{cv.name}}" maxlength="50"></p>
+        <p>About:</p>
+        <p><input type="text" name="about" required placeholder="love chess" value="{{cv.about}}" maxlength="5000"></p>
+        <p>Work experience:</p>
+        <p><input type="text" name="work_experience" required placeholder="Teaching assistant" value="{{cv.work_experience}}" maxlength="5000"></p>
+        <p>Education:</p>
+        <p><input type="text" name="education" required placeholder="AMI CS HSE" value="{{cv.education}}" maxlength="5000"></p>
+        <p>Contact email:</p>
+        <p><input type="email" name="email" required placeholder="" value="{{cv.email}}" maxlength="100"></p>
+
+        <p> <input class="save" name="action" type="submit" value="save"></p>
+    </form>
+{% endblock %}
